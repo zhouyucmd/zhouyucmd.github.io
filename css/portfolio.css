@@ -117,7 +117,7 @@
 .loading {
 	opacity: 0;
 	z-index: 1;
-	background: transparent url(../images/loader.gif) no-repeat center center;
+	background: transparent url(../images/003.gif) no-repeat center center;
 	-webkit-transform: scale(0.5);
 	transform: scale(0.5);
 	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
@@ -197,7 +197,7 @@
 /* Dummy content */
 
 .content-img {
-	max-width: 600px;
+	max-width: 1024px;
 	width: 90%;
 	opacity: 0;
 	-webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
@@ -240,7 +240,7 @@
 }
 .content-img {
 	height: 400px;
-	background-color: #ddd;
+	background-color: #fff;
 	margin: 30px auto;
 }
 .content-text {
