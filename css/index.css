@@ -233,13 +233,17 @@ body {
   display: inline-block;
   width: 40px;
   height: 40px;
-  background: url(../images/social-icons.png) no-repeat 0px 0px;
+  background: url(../images/github.png) no-repeat 0px 0px;
+  background-size: contain;
+  margin: 0 10px;
 }
-.social-icons span.facebook {
-  background-position: 0px 0px;
+.social-icons span.github {
+  background: url(../images/github.png) no-repeat 0px 0px;
+  background-size: contain;
 }
 .social-icons span.twitter {
-  background-position: -40px 0px;
+  background: url(../images/github.png) no-repeat 0px 0px;
+  background-size: contain;
 }
 span.line1 {
   width: 484px;
@@ -415,6 +419,21 @@ img.img-responsive {
   line-height: 25px;
   font-weight: 400;
 }
+.lian {
+  padding: 5px 0!important;
+  line-height: 25px;
+}
+.lian i {
+  font-size: 28px;
+  padding: 5px;
+  color: #a1b3a4;
+}
+.lian span {
+  font-size: 24px!important;
+  display: inline-block;
+  text-align: center;
+  padding: 5px;
+}
 input#name {
   outline: none;
   height: 50px;
@@ -552,12 +571,15 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 .slide {
   /* The name of the animation */
+
   animation-name: slide;
   -webkit-animation-name: slide;
   /* The duration of the animation */
+
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
   /* Make the element visible */
+
   visibility: visible;
 }
 /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
