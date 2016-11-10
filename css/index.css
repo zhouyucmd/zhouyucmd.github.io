@@ -466,7 +466,7 @@ img.im {
   transform: translateY(350px);
 }
 .grid figure:hover div p {
-  color: #00A2FF;
+  color: #00a2ff;
 }
 .grid figure:hover span {
   animation: div 1s alternate infinite;
@@ -498,8 +498,8 @@ img.im {
   padding: 50px 0 40px;
 }
 .mygallery img.img-responsive {
-  height: 282px;
-  margin-bottom: 5px;
+  height: 290px;
+  margin: 4px;
   opacity: 0.67;
   display: inline-block;
   transition: 0.5s all;
@@ -545,7 +545,7 @@ img.im {
 .lian i {
   font-size: 28px;
   padding: 5px;
-  color: #A1B3A4;
+  color: #a1b3a4;
 }
 .lian span {
   font-size: 24px!important;
