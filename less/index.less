@@ -40,7 +40,7 @@ button{
   -ms-transition:0.5s all;
 }
 body {
-  font-family: '微软雅黑', sans-serif;
+  font-family: '微软雅黑', sans-serif!important;
 }
 
 .navbar-wrapper {
@@ -85,6 +85,17 @@ body {
   font-size: 1.2em;
   font-weight: normal;
 }
+.navbar-inverse .navbar-nav>li:hover>a{
+  color: #fe6e20;
+  font-size: 1.2em;
+  font-weight: 800;
+}
+.navbar-brand img{
+    margin:-15px -15px;
+    width:120px;
+   
+    
+  }
 @media (min-width: 768px) {
   .navbar-wrapper {
     margin-top: 20px;
@@ -197,10 +208,26 @@ body {
 .rslides {
   margin: 0 auto;
 }
+
 .banner-info {
   text-align: center;
   width: 100%;
   margin: 280px 0 0 390px;
+  animation: ban 2s infinite alternate;
+}
+@keyframes ban {
+  0%{
+    -webkit-transform: translatex(-10px);
+    -moz-transform: translatex(-10px);
+    -ms-transform:translatex(-10px) ;
+    -o-transform:translatex(-10px) ;
+    transform:translatex(-10px) ;}
+  100%{
+    -webkit-transform:translatex(0px) ;
+    -moz-transform:translatex(0px) ;
+    -ms-transform: translatex(0px);
+    -o-transform:translatex(0px) ;
+    transform:translatex(0px) ;}
 }
 .banner-info h3{
   color: #fff;
@@ -274,8 +301,18 @@ img.img-responsive {
   margin: auto;
   height: 100%;
 }
+img.im{
+  animation: im 2s infinite alternate;
+}
+@keyframes im{
+  0%{outline-style: dashed;border-radius: 0%;outline-color:#fff;outline-offset:0px }
+  100%{outline-style: dashed;border-radius: 20%;outline-color:#fff;outline-offset:10px}
+}
 .mydetails , .myskills {
-  background-color: rgba(129, 224, 144, 0.14);
+  background: url("");
+  //background-color: rgba(129, 224, 144, 0.14);
+  background-color: rgba(255,90,0,0.08);
+  //background-color: rgba(0,44,255,.15);
 }
 .mydetails {
   padding:5.3em 0;
@@ -322,18 +359,52 @@ img.img-responsive {
   padding:2em 0;
 }
 .myskills h3 {
-  color:#000;
+  color:#3B3B3B;
   padding:25px;
   font-family: 'Cinzel', serif;
-  font-size:25px;
+  font-size:38px;
   line-height:25px;
   font-weight:bold;
 }
 .myskills p {
   padding:16px 37px;
-  font-size:17px;
+  font-size:18px;
   line-height:25px;
   font-weight:400;
+  color:#3B3B3B;
+  animation: kit 2s infinite alternate;
+}
+@keyframes kit {
+  0%{
+    -webkit-transform: translatex(-5px);
+    -moz-transform: translatex(-5px);
+    -ms-transform:translatex(-5px) ;
+    -o-transform:translatex(-5px) ;
+    transform:translatex(-5px) ;}
+  //25%{
+  //  -webkit-transform: translatex(-5px);
+  //  -moz-transform: translatex(-5px);
+  //  -ms-transform:translatex(-5px) ;
+  //  -o-transform:translatex(-5px) ;
+  //  transform:translatex(-5px) ;}
+  //50%{
+  //  -webkit-transform: translatex(0px);
+  //  -moz-transform: translatex(0px);
+  //  -ms-transform:translatex(0px) ;
+  //  -o-transform:translatex(0px) ;
+  //  transform:translatex(0px) ;}
+  //75%{
+  //  -webkit-transform: translatex(5px);
+  //  -moz-transform: translatex(5px);
+  //  -ms-transform:translatex(5px) ;
+  //  -o-transform:translatex(5px) ;
+  //  transform:translatex(5px) ;}
+  100%{
+    -webkit-transform:translatex(0px) ;
+    -moz-transform:translatex(0px) ;
+    -ms-transform: translatex(0px);
+    -o-transform:translatex(0px) ;
+    transform:translatex(0px) ;}
 }
 .table>tbody>tr>td, .table>tbody>tr>th, .table>tfoot>tr>td, .table>tfoot>tr>th, .table>thead>tr>td, .table>thead>tr>th {
   padding: 10px;
@@ -356,11 +427,57 @@ img.img-responsive {
   padding: 85px 0 20px;
 }
 .myportfolio p {
+  color:#626764;
   padding: 5px 0 15px;
   font-size:17px;
   line-height:25px;
   font-weight:400;
 }
+.grid figure{
+  position:relative;
+  overflow: hidden;
+  div{
+    position: absolute;
+    top:-350px;
+    opacity: 1;
+    width: 100%;
+    height:100%;
+    z-index: 8888;
+    background:rgba(0,0,0,0.8);
+    line-height: 200px;
+    span{color: #fe6e20;
+      font-size: 60px;
+      -webkit-transition: opacity 0.3s, -webkit-transform 0.3s;
+      -moz-transition: opacity 0.3s, -moz-transform 0.3s;
+      transition: opacity 0.3s, transform 0.3s;
+    }
+    p{
+      color: #fff;
+      margin-top: -30px;
+      font-size: 22px;
+    }
+
+    -webkit-transition: opacity 1s, -webkit-transform 0.3s;
+    -moz-transition: opacity 1s, -moz-transform 0.3s;
+    transition: opacity 1s, transform 0.3s;
+
+  }
+}
+.grid figure:hover div{
+  p{color:#00A2FF}
+  -webkit-transform: translateY(350px);
+  -moz-transform: translateY(350px);
+  transform: translateY(350px);
+}
+.grid figure:hover span{
+  animation:div 1s alternate infinite;
+
+}
+@keyframes div {
+  0%{transform:rotate(0deg);opacity: 0;font-size: 40px}
+  100%{transform:rotate(45deg);opacity: 1;font-size: 100px}
+}
+
 /*-- /Portfolio --*/
 /*-- Gallery --*/
 .mygallery {
@@ -410,6 +527,7 @@ img.img-responsive {
   padding: 80px 0 20px;
 }
 .contact-me p {
+  color:#3B3B3B;
   padding:5px 0 60px;
   font-size:17px;
   line-height:25px;
@@ -544,7 +662,7 @@ p.p2 a:hover {
   padding: 2em 0 0 .3em;
 }
 hr{
-  border-top:1px solid #BDB8B8;
+  border-top:2px solid #BDB8B8;
   margin-top:45px;
 }
 .copyright p a{
@@ -559,22 +677,37 @@ hr{
 }
 footer span.glyphicon.glyphicon-chevron-up {
   margin: 0 0 0 50%;
-  font-size:30px;
+  font-size:40px;
+}
+footer span.glyphicon.glyphicon-chevron-up{
+  animation:top .8s infinite  alternate;
+}
+footer span.glyphicon.glyphicon-chevron-up:hover{
+  animation:top .8s alternate;
+  color: #fe6e20;
+  font-size: 43px;
+  transition: 0.5s all;
+  -webkit-transition: 0.5s all;
+  -moz-transition: 0.5s all;
+  -o-transition: 0.5s all;
+  -ms-transition: 0.5s all;
+
+}
+@keyframes top{
+  0%{transform:perspective(400px) rotateX(0deg);}
+  100%{transform:perspective(400px) rotateX(360deg);}
 }
 /*-- /Footer --*/
 /*-- sliding --*/
 .slideanim {visibility:hidden;}
 .slide {
-  /* The name of the animation */
+
   animation-name: slide;
   -webkit-animation-name: slide;
-  /* The duration of the animation */
   animation-duration: 1s;
   -webkit-animation-duration: 1s;
-  /* Make the element visible */
   visibility: visible;
 }
-/* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
 @keyframes slide {
   0% {
     opacity: 0;
@@ -595,8 +728,6 @@ footer span.glyphicon.glyphicon-chevron-up {
     -webkit-transform: translateY(0%);
   }
 }
-/*-- /sliding --*/
-/*---- responsive-design -----*/
 @media (max-width: 1600px) {
   .banner {
     min-height:795px;
@@ -616,12 +747,16 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 
 @media (max-width: 1280px) {
+
   .banner-info {
     margin: 235px 0 0 320px;
   }
 }
 
 @media (max-width: 1080px) {
+  .mydetails {
+    padding: 6.3em 0;
+  }
   .grid figure, .grid .placeholder {
     width: 295px;
     height: 295px;
@@ -648,6 +783,9 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 
 @media (max-width: 1024px) {
+  .mydetails {
+    padding: 6.3em 0;
+  }
   .banner {
     min-height: 675px;
   }
@@ -660,6 +798,9 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 
 @media (max-width: 991px) {
+  .mydetails {
+    padding: 6.3em 0;
+  }
   .grid figure, .grid .placeholder {
     width: 280px;
     height: 280px;
@@ -683,6 +824,9 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 
 @media (max-width: 900px) {
+  .mydetails {
+    padding: 6.3em 0;
+  }
   .grid figure, .grid .placeholder {
     width: 260px;
     height: 260px;
@@ -703,6 +847,16 @@ footer span.glyphicon.glyphicon-chevron-up {
 }
 
 @media (max-width: 800px) {
+  .mydetails {
+    padding: 6.3em 0;
+  }
+  .grid figure div {
+    p{
+      font-size: 16px;
+      margin-top: -50px;
+    }
+
+  }
   .banner {
     min-height: 600px;
   }
