@@ -233,6 +233,16 @@
 	-webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
 	transition: opacity 0.7s, transform 0.7s;
 }
+.myportfolio h4.content-text {
+	text-align:center;
+	font-size:24px;
+	font-family: 'Cinzel', serif;
+	line-height:25px;
+	font-weight:bold;
+	padding: 0px 0 35px;
+	-webkit-transition: opacity 0.6s, -webkit-transform 0.6s;
+	transition: opacity 0.7s, transform 0.7s;
+}
 .myportfolio p.content-text {
 	text-align:center;
 	font-size:17px;
